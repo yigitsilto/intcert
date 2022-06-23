@@ -246,14 +246,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
  return http.post(url,
         headers: {
           "content-Type": "application/json",
-          "Access-Control-Allow-Origin" : "*",
-          "Vary" : "Origin",
-                    "Vary" : "Access-Control-Request-Method",
-          "Vary" : "Access-Control-Request-Headers",
-          "Access-Control-Allow-Headers" : "Content-Type, Origin, Accept, token",
-          "Access-Control-Allow-Methods" : "GET, POST, OPTIONS",
-
-
           },
         body: body
   ).then((value) => {
@@ -315,14 +307,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
  return http.post(url,
         headers: {
           "content-Type": "application/json",
-          "Access-Control-Allow-Origin" : "*",
-          "Vary" : "Origin",
-                    "Vary" : "Access-Control-Request-Method",
-          "Vary" : "Access-Control-Request-Headers",
-          "Access-Control-Allow-Headers" : "Content-Type, Origin, Accept, token",
-          "Access-Control-Allow-Methods" : "GET, POST, OPTIONS",
-
-
           },
         body: body
   ).then((value) => {
@@ -458,7 +442,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       MaterialStateProperty.all<Color>(Colors.blue),
                 ),
                 onPressed: () {
-                  qrCode();
+                  sendCertificateCode();
                 },
                 child: Icon(Icons.search, color: HexColor('#B9BABC')),
               ),
